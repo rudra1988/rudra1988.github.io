@@ -1,0 +1,8 @@
+@inproceedings{srinivasan2012segmenting,
+  title={Segmenting web-domains and hashtags using length specific models},
+  author={Srinivasan, Sriram and Bhattacharya, Sourangshu and Chakraborty, Rudrasis},
+  booktitle={Proceedings of the 21st ACM international conference on Information and knowledge management},
+  pages={1113--1122},
+  year={2012},
+  organization={ACM}
+}

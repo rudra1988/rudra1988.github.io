@@ -1,0 +1,947 @@
+{
+	"items" :      [
+		{
+			"booktitle" : "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+			"pub-type" :  "inproceedings",
+			"uri" :       "urn:28c94f3d41c9dd4e97739e6615084739",
+			"pages" :     "5010--5018",
+			"date" :      "2017",
+			"author" :    [
+				"Banerjee, Monami",
+				"Chakraborty, Rudrasis",
+				"Vemuri, Baba C"
+			],
+			"type" :      "Publication",
+			"year" :      "2017",
+			"label" :     "Sparse Exact PGA on Riemannian Manifolds",
+			"key" :       "banerjee2017sparse"
+		},
+		{
+			"publisher" : "Cell Press",
+			"journal" :   "Cancer cell",
+			"pub-type" :  "article",
+			"uri" :       "urn:cd6616ad05637cdf566f12444264de2c",
+			"pages" :     "194--207",
+			"date" :      "2017",
+			"number" :    "2",
+			"author" :    [
+				"Katlinski, Kanstantsin V",
+				"Gui, Jun",
+				"Katlinskaya, Yuliya V",
+				"Ortiz, Angelica",
+				"Chakraborty, Riddhita",
+				"Bhattacharya, Sabyasachi",
+				"Carbone, Christopher J",
+				"Beiting, Daniel P",
+				"Girondo, Melanie A",
+				"Peck, Amy R",
+				"others"
+			],
+			"volume" :    "31",
+			"type" :      "Publication",
+			"year" :      "2017",
+			"label" :     "Inactivation of interferon receptor promotes the establishment of immune privileged tumor microenvironment",
+			"key" :       "katlinski2017inactivation"
+		},
+		{
+			"journal" :  "arXiv preprint arXiv:1604.06939",
+			"pub-type" : "article",
+			"uri" :      "urn:464d3676c0e6d657de18ddc31ea090c5",
+			"date" :     "2016",
+			"author" :   [
+				"Chakraborty, Rudrasis",
+				"Banerjee, Monami",
+				"Crawford, Victoria",
+				"Vemuri, Baba C"
+			],
+			"type" :     "Publication",
+			"year" :     "2016",
+			"label" :    "An information theoretic formulation of the Dictionary Learning and Sparse Coding Problems on Statistical Manifolds",
+			"key" :      "chakraborty2016information"
+		},
+		{
+			"label" :         "Srinivasan, Sriram",
+			"type" :          "Author",
+			"original-name" : "Srinivasan, Sriram",
+			"last-name" :     "Srinivasan"
+		},
+		{
+			"label" :         "Katlinskaya, Yuliya V",
+			"type" :          "Author",
+			"original-name" : "Katlinskaya, Yuliya V",
+			"last-name" :     "Katlinskaya"
+		},
+		{
+			"label" :         "Pal, Nikhil R",
+			"type" :          "Author",
+			"original-name" : "Pal, Nikhil R",
+			"last-name" :     "Pal"
+		},
+		{
+			"label" :         "Seo, Dohyung",
+			"type" :          "Author",
+			"original-name" : "Seo, Dohyung",
+			"last-name" :     "Seo"
+		},
+		{
+			"publisher" : "World Scientific Publishing Company",
+			"journal" :   "International journal of neural systems",
+			"pub-type" :  "article",
+			"uri" :       "urn:83635890867ccbbd14a596cb5e0a2a62",
+			"pages" :     "1450021",
+			"date" :      "2014",
+			"number" :    "06",
+			"author" :    [
+				"Chakraborty, Rudrasis",
+				"Lin, Chin-Teng",
+				"Pal, Nikhil R"
+			],
+			"volume" :    "24",
+			"type" :      "Publication",
+			"year" :      "2014",
+			"label" :     "Sensor (group feature) selection with controlled redundancy in a connectionist framework",
+			"key" :       "chakraborty2014sensor"
+		},
+		{
+			"label" :         "Viallancourt, David E",
+			"type" :          "Author",
+			"original-name" : "Viallancourt, David E",
+			"last-name" :     "Viallancourt"
+		},
+		{
+			"label" :         "Ghosal, Arijit",
+			"type" :          "Author",
+			"original-name" : "Ghosal, Arijit",
+			"last-name" :     "Ghosal"
+		},
+		{
+			"label" :         "Chakraborty, Rudrasis",
+			"type" :          "Author",
+			"original-name" : "Chakraborty, Rudrasis",
+			"last-name" :     "Chakraborty"
+		},
+		{
+			"organization" : "Springer, Cham",
+			"booktitle" :    "International Conference on Medical Image Computing and Computer-Assisted Intervention",
+			"pub-type" :     "inproceedings",
+			"uri" :          "urn:b08e2a0b2da6b6b1dda4b6b13c786cd5",
+			"pages" :        "719--727",
+			"date" :         "2015",
+			"author" :       [
+				"Banerjee, Monami",
+				"Chakraborty, Rudrasis",
+				"Ofori, Edward",
+				"Vaillancourt, David",
+				"Vemuri, Baba C"
+			],
+			"type" :         "Publication",
+			"year" :         "2015",
+			"label" :        "Nonlinear regression on Riemannian manifolds and its applications to Neuro-image analysis",
+			"key" :          "banerjee2015nonlinear"
+		},
+		{
+			"label" :         "Chakraborty, R",
+			"type" :          "Author",
+			"original-name" : "Chakraborty, R",
+			"last-name" :     "Chakraborty"
+		},
+		{
+			"publisher" : "Elsevier",
+			"journal" :   "Applied Soft Computing",
+			"pub-type" :  "article",
+			"uri" :       "urn:9ad358fb5d8a6bb3fe67f4c52fbf0fa2",
+			"pages" :     "2405--2411",
+			"date" :      "2013",
+			"number" :    "5",
+			"author" :    [
+				"Bandyopadhyay, Sanghamitra",
+				"Maulik, Ujjwal",
+				"Chakraborty, Rudrasis"
+			],
+			"volume" :    "13",
+			"type" :      "Publication",
+			"year" :      "2013",
+			"label" :     "Incorporating epsilon-dominance in AMOSA: Application to multiobjective 0\/1 knapsack problem and clustering gene expression data",
+			"key" :       "bandyopadhyay2013incorporating"
+		},
+		{
+			"label" :         "Katlinski, Kanstantsin V",
+			"type" :          "Author",
+			"original-name" : "Katlinski, Kanstantsin V",
+			"last-name" :     "Katlinski"
+		},
+		{
+			"journal" :  "arXiv preprint arXiv:1702.01005",
+			"pub-type" : "article",
+			"uri" :      "urn:c007601930b3e5d9899061137374177b",
+			"date" :     "2017",
+			"author" :   [
+				"Chakraborty, Rudrasis",
+				"Hauberg, S{\\o}ren",
+				"Vemuri, Baba C"
+			],
+			"type" :     "Publication",
+			"year" :     "2017",
+			"label" :    "Intrinsic Grassmann Averages for Online Linear and Robust Subspace Learning",
+			"key" :      "chakraborty2017intrinsic"
+		},
+		{
+			"label" :         "Anaya-Velazquez, F",
+			"type" :          "Author",
+			"original-name" : "Anaya-Velazquez, F",
+			"last-name" :     "Anaya-Velazquez"
+		},
+		{
+			"publisher" : "Springer, Berlin, Heidelberg",
+			"booktitle" : "Signal Processing, Image Processing and Pattern Recognition",
+			"pub-type" :  "incollection",
+			"uri" :       "urn:c9b6462426ea102a68b36015afb9ae67",
+			"pages" :     "179--185",
+			"date" :      "2011",
+			"author" :    [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"year" :      "2011",
+			"type" :      "Publication",
+			"label" :     "Song classification: Classical and non-classical discrimination using mfcc co-occurrence based features",
+			"key" :       "ghosal2011song"
+		},
+		{
+			"label" :         "Armstrong, W",
+			"type" :          "Author",
+			"original-name" : "Armstrong, W",
+			"last-name" :     "Armstrong"
+		},
+		{
+			"label" :         "Ofori, Edward",
+			"type" :          "Author",
+			"original-name" : "Ofori, Edward",
+			"last-name" :     "Ofori"
+		},
+		{
+			"label" :         "Vemuri, Baba C.",
+			"type" :          "Author",
+			"original-name" : "Vemuri, Baba C.",
+			"last-name" :     "Vemuri"
+		},
+		{
+			"organization" : "IEEE",
+			"booktitle" :    "Biomedical Imaging (ISBI), 2017 IEEE 14th International Symposium on",
+			"pub-type" :     "inproceedings",
+			"uri" :          "urn:b9023f708a3fa24ea35f36d595192823",
+			"pages" :        "999--1002",
+			"date" :         "2017",
+			"author" :       [
+				"Chakraborty, Rudrasis",
+				"Banerjee, Monami",
+				"Vemuri, Baba"
+			],
+			"type" :         "Publication",
+			"year" :         "2017",
+			"label" :        "Statistics on the space of trajectories for longitudinal data analysis",
+			"key" :          "chakraborty2017statistics"
+		},
+		{
+			"label" :         "Bandyopadhyay, Sanghamitra",
+			"type" :          "Author",
+			"original-name" : "Bandyopadhyay, Sanghamitra",
+			"last-name" :     "Bandyopadhyay"
+		},
+		{
+			"publisher" : "Inderscience Publishers (IEL)",
+			"journal" :   "International Journal of Computational Intelligence Studies",
+			"pub-type" :  "article",
+			"uri" :       "urn:24ae993010ac7ce5e1a0ffcce0402f43",
+			"pages" :     "31--49",
+			"date" :      "2015",
+			"number" :    "1",
+			"author" :    [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"volume" :    "4",
+			"type" :      "Publication",
+			"year" :      "2015",
+			"label" :     "Perceptual feature-based song genre classification using RANSAC",
+			"key" :       "ghosal2015perceptual"
+		},
+		{
+			"publisher" : "Springer, Berlin, Heidelberg",
+			"booktitle" : "Computer Networks and Intelligent Computing",
+			"pub-type" :  "incollection",
+			"uri" :       "urn:763e2fdf3b5f44d47f2b5a2b7a051964",
+			"pages" :     "560--565",
+			"date" :      "2011",
+			"author" :    [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"year" :      "2011",
+			"type" :      "Publication",
+			"label" :     "Automatic identification of instrument type in music signal using wavelet and mfcc",
+			"key" :       "ghosal2011automatic"
+		},
+		{
+			"label" :         "Hauberg, S{\\o}ren",
+			"type" :          "Author",
+			"original-name" : "Hauberg, S{\\o}ren",
+			"last-name" :     "Hauberg"
+		},
+		{
+			"publisher" : "IEEE",
+			"journal" :   "IEEE transactions on neural networks and learning systems",
+			"pub-type" :  "article",
+			"uri" :       "urn:ce677967c961993988347d3d3a6563c7",
+			"pages" :     "35--50",
+			"date" :      "2015",
+			"number" :    "1",
+			"author" :    [
+				"Chakraborty, Rudrasis",
+				"Pal, Nikhil R"
+			],
+			"volume" :    "26",
+			"type" :      "Publication",
+			"year" :      "2015",
+			"label" :     "Feature selection using a neural framework with controlled redundancy",
+			"key" :       "chakraborty2015feature"
+		},
+		{
+			"organization" : "IEEE",
+			"booktitle" :    "Intelligent Information Technology Application, 2009. IITA 2009. Third International Symposium on",
+			"pub-type" :     "inproceedings",
+			"uri" :          "urn:0c015ee7d56d6f90b0b0816d5430d8d5",
+			"pages" :        "435--438",
+			"date" :         "2009",
+			"author" :       [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Chakraborty, Ractim",
+				"Haty, Swagata",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"volume" :       "3",
+			"type" :         "Publication",
+			"year" :         "2009",
+			"label" :        "Speech\/music classification using occurrence pattern of zcr and ste",
+			"key" :          "ghosal2009speech"
+		},
+		{
+			"label" :         "Bonifaz, A",
+			"type" :          "Author",
+			"original-name" : "Bonifaz, A",
+			"last-name" :     "Bonifaz"
+		},
+		{
+			"label" :         "Ortiz, Angelica",
+			"type" :          "Author",
+			"original-name" : "Ortiz, Angelica",
+			"last-name" :     "Ortiz"
+		},
+		{
+			"publisher" : "Springer International Publishing",
+			"journal" :   "SpringerPlus",
+			"pub-type" :  "article",
+			"uri" :       "urn:e42b3540a1129dbf320188715048e076",
+			"pages" :     "526",
+			"date" :      "2013",
+			"number" :    "1",
+			"author" :    [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"volume" :    "2",
+			"type" :      "Publication",
+			"year" :      "2013",
+			"label" :     "A hierarchical approach for speech-instrumental-song classification",
+			"key" :       "ghosal2013hierarchical"
+		},
+		{
+			"label" :         "Gui, Jun",
+			"type" :          "Author",
+			"original-name" : "Gui, Jun",
+			"last-name" :     "Gui"
+		},
+		{
+			"label" :         "Singh, Vikas",
+			"type" :          "Author",
+			"original-name" : "Singh, Vikas",
+			"last-name" :     "Singh"
+		},
+		{
+			"pub-type" : "phdthesis",
+			"uri" :      "urn:b63cfe316dd28b2c6132ad2fbbc98b55",
+			"date" :     "2012",
+			"school" :   "Indian Statistical Institution",
+			"author" :   "Chakraborty, Rudrasis",
+			"type" :     "Publication",
+			"year" :     "2012",
+			"label" :    "Incorporating epsilon-dominance in MultiObjective Optimization: A Study in AMOSA",
+			"key" :      "chakraborty2012incorporating"
+		},
+		{
+			"publisher" : "Springer, New Delhi",
+			"booktitle" : "Intelligent Computing, Networking, and Informatics",
+			"pub-type" :  "incollection",
+			"uri" :       "urn:9752fd5d7d99bb13f43e430b8a624ffc",
+			"pages" :     "267--276",
+			"date" :      "2014",
+			"author" :    [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"year" :      "2014",
+			"type" :      "Publication",
+			"label" :     "Genre-Based Classification of Song Using Perceptual Features",
+			"key" :       "ghosal2014genre"
+		},
+		{
+			"label" :         "Aggarwal, R",
+			"type" :          "Author",
+			"original-name" : "Aggarwal, R",
+			"last-name" :     "Aggarwal"
+		},
+		{
+			"journal" :  "arXiv preprint arXiv:1708.00045",
+			"pub-type" : "article",
+			"uri" :      "urn:1bd7f05220aab3433b0a8603115ab489",
+			"date" :     "2017",
+			"author" :   [
+				"Chakraborty, Rudrasis",
+				"Vemuri, Baba"
+			],
+			"type" :     "Publication",
+			"year" :     "2017",
+			"label" :    "Statistics on the (compact) Stiefel manifold: Theory and Applications",
+			"key" :      "chakraborty2017statistics"
+		},
+		{
+			"label" :         "Fuller, David",
+			"type" :          "Author",
+			"original-name" : "Fuller, David",
+			"last-name" :     "Fuller"
+		},
+		{
+			"label" :         "Lin, Chin-Teng",
+			"type" :          "Author",
+			"original-name" : "Lin, Chin-Teng",
+			"last-name" :     "Lin"
+		},
+		{
+			"label" :         "Chakraborty, Riddhita",
+			"type" :          "Author",
+			"original-name" : "Chakraborty, Riddhita",
+			"last-name" :     "Chakraborty"
+		},
+		{
+			"label" :         "Okun, Michael S",
+			"type" :          "Author",
+			"original-name" : "Okun, Michael S",
+			"last-name" :     "Okun"
+		},
+		{
+			"label" :         "Vemuri, Baba C",
+			"type" :          "Author",
+			"original-name" : "Vemuri, Baba C",
+			"last-name" :     "Vemuri"
+		},
+		{
+			"label" :         "Maulik, Ujjwal",
+			"type" :          "Author",
+			"original-name" : "Maulik, Ujjwal",
+			"last-name" :     "Maulik"
+		},
+		{
+			"label" :         "Beiting, Daniel P",
+			"type" :          "Author",
+			"original-name" : "Beiting, Daniel P",
+			"last-name" :     "Beiting"
+		},
+		{
+			"label" :         "Bhattacharya, S",
+			"type" :          "Author",
+			"original-name" : "Bhattacharya, S",
+			"last-name" :     "Bhattacharya"
+		},
+		{
+			"label" :         "Chai, L",
+			"type" :          "Author",
+			"original-name" : "Chai, L",
+			"last-name" :     "Chai"
+		},
+		{
+			"journal" :  "Mathematical Foundations of Computational Anatomy",
+			"pub-type" : "article",
+			"uri" :      "urn:e2d32ce70e7840fc848f9604ba6667ca",
+			"date" :     "2015",
+			"author" :   [
+				"Salehian, Hesamoddin",
+				"Chakraborty, Rudrasis",
+				"Ofori, Edward",
+				"Vaillancourt, David",
+				"Vemuri, Baba C"
+			],
+			"type" :     "Publication",
+			"year" :     "2015",
+			"label" :    "An efficient recursive estimator of the Frechet mean on a hypersphere with applications to medical image analysis",
+			"key" :      "salehian2015efficient"
+		},
+		{
+			"organization" : "IEEE",
+			"booktitle" :    "Electronics Computer Technology (ICECT), 2011 3rd International Conference on",
+			"pub-type" :     "inproceedings",
+			"uri" :          "urn:bde3d2b263df1aa45b19ca80bdadb7fa",
+			"pages" :        "269--272",
+			"date" :         "2011",
+			"author" :       [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"volume" :       "1",
+			"type" :         "Publication",
+			"year" :         "2011",
+			"label" :        "Instrumental\/song classification of music signal using ransac",
+			"key" :          "ghosal2011instrumental"
+		},
+		{
+			"booktitle" : "Mathematical Foundations of Computational Anatomy",
+			"pub-type" :  "inproceedings",
+			"uri" :       "urn:9df3eb7c8b1d729531e02fd177b18c9a",
+			"date" :      "2015",
+			"author" :    [
+				"Chakraborty, Rudrasis",
+				"Banerjee, Monami",
+				"Seo, Dohyung",
+				"Turner, Sara",
+				"Fuller, David",
+				"Forder, John",
+				"Vemuri, Baba C"
+			],
+			"type" :      "Publication",
+			"year" :      "2015",
+			"label" :     "An Efficient Recursive Algorithm for Atlas Construction",
+			"key" :       "chakraborty2015efficient"
+		},
+		{
+			"label" :    "H-CNNs: Convolutional Neural Networks for Riemannian Homogeneous Spaces",
+			"date" :     "2018",
+			"key" :      "chakraborty2018h",
+			"type" :     "Publication",
+			"pub-type" : "article",
+			"author" :   [
+				"Chakraborty, Rudrasis",
+				"Banerjee, Monami",
+				"Vemuri, Baba C"
+			],
+			"year" :     "2018",
+			"uri" :      "urn:128bf744595608ec993a53b14ff07eba"
+		},
+		{
+			"label" :         "Chakraborty, Ractim",
+			"type" :          "Author",
+			"original-name" : "Chakraborty, Ractim",
+			"last-name" :     "Chakraborty"
+		},
+		{
+			"label" :         "Bhowmick, T",
+			"type" :          "Author",
+			"original-name" : "Bhowmick, T",
+			"last-name" :     "Bhowmick"
+		},
+		{
+			"label" :         "Bhattacharya, Sourangshu",
+			"type" :          "Author",
+			"original-name" : "Bhattacharya, Sourangshu",
+			"last-name" :     "Bhattacharya"
+		},
+		{
+			"label" :         "Canton, R",
+			"type" :          "Author",
+			"original-name" : "Canton, R",
+			"last-name" :     "Canton"
+		},
+		{
+			"journal" :  "International Journal of Signal Processing, Image Processing and Pattern Recognition",
+			"pub-type" : "article",
+			"uri" :      "urn:e8acaf5ca551b1627e4172559c8989fa",
+			"pages" :    "131--150",
+			"date" :     "2012",
+			"number" :   "1",
+			"author" :   [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"volume" :   "5",
+			"type" :     "Publication",
+			"year" :     "2012",
+			"label" :    "Music classification based on MFCC variants and amplitude variation pattern: a hierarchical approach",
+			"key" :      "ghosal2012music"
+		},
+		{
+			"label" :         "others",
+			"type" :          "Author",
+			"original-name" : "others",
+			"last-name" :     "others"
+		},
+		{
+			"label" :         "Forder, John",
+			"type" :          "Author",
+			"original-name" : "Forder, John",
+			"last-name" :     "Forder"
+		},
+		{
+			"label" :         "Carbone, Christopher J",
+			"type" :          "Author",
+			"original-name" : "Carbone, Christopher J",
+			"last-name" :     "Carbone"
+		},
+		{
+			"label" :         "Peck, Amy R",
+			"type" :          "Author",
+			"original-name" : "Peck, Amy R",
+			"last-name" :     "Peck"
+		},
+		{
+			"label" :         "Adluru, Nagesh",
+			"type" :          "Author",
+			"original-name" : "Adluru, Nagesh",
+			"last-name" :     "Adluru"
+		},
+		{
+			"journal" :  "Hereditas",
+			"pub-type" : "article",
+			"uri" :      "urn:680108d27ef8cc173ac8fba161c621d0",
+			"pages" :    "17--21",
+			"author" :   [
+				"Chakraborty, R",
+				"HUG, M"
+			],
+			"volume" :   "97",
+			"type" :     "Publication",
+			"label" :    "N. R m and G. STAHL, 1982 Hierarchical gene diversity analysis and its application to brown trout population data",
+			"key" :      "chakraborty97n"
+		},
+		{
+			"organization" : "ACM",
+			"booktitle" :    "Proceedings of the CUBE International Information Technology Conference",
+			"pub-type" :     "inproceedings",
+			"uri" :          "urn:81781bb1c61b04a95085e51a586642e9",
+			"pages" :        "21--25",
+			"date" :         "2012",
+			"author" :       [
+				"Ghosal, Arijit",
+				"Chakraborty, Rudrasis",
+				"Dhara, Bibhas Chandra",
+				"Saha, Sanjoy Kumar"
+			],
+			"type" :         "Publication",
+			"year" :         "2012",
+			"label" :        "Song\/instrumental classification using spectrogram based contextual features",
+			"key" :          "ghosal2012song"
+		},
+		{
+			"pub-type" : "phdthesis",
+			"uri" :      "urn:77d1c6344c86d49bed3dc78d57b5b210",
+			"date" :     "2010",
+			"school" :   "Jadavpur University",
+			"author" :   "Chakraborty, Rudrasis",
+			"type" :     "Publication",
+			"year" :     "2010",
+			"label" :    "Audio Classification",
+			"key" :      "chakraborty2010audio"
+		},
+		{
+			"label" :         "Crawford, Victoria",
+			"type" :          "Author",
+			"original-name" : "Crawford, Victoria",
+			"last-name" :     "Crawford"
+		},
+		{
+			"label" :         "HUG, M",
+			"type" :          "Author",
+			"original-name" : "HUG, M",
+			"last-name" :     "HUG"
+		},
+		{
+			"booktitle" : "Proceedings of the IEEE Conference of Computer Vision and Pattern Recognition",
+			"pub-type" :  "inproceedings",
+			"uri" :       "urn:fc71db33641380f5e2750de81490a2b3",
+			"pages" :     "3976--3984",
+			"date" :      "2016",
+			"author" :    [
+				"Chakraborty, Rudrasis",
+				"Seo, Dohyung",
+				"Vemuri, Baba C."
+			],
+			"type" :      "Publication",
+			"year" :      "2016",
+			"label" :     "An Efficient Exact-PGA Algorithm for Constant Curvature Manifolds",
+			"key" :       "chakraborty2016efficient"
+		},
+		{
+			"booktitle" : "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+			"pub-type" :  "inproceedings",
+			"uri" :       "urn:ab460103170dc5fc9393e7ea57fd0cb0",
+			"pages" :     "4424--4432",
+			"date" :      "2016",
+			"author" :    [
+				"Banerjee, Monami",
+				"Chakraborty, Rudrasis",
+				"Ofori, Edward",
+				"Okun, Michael S",
+				"Viallancourt, David E",
+				"Vemuri, Baba C"
+			],
+			"type" :      "Publication",
+			"year" :      "2016",
+			"label" :     "A nonlinear regression technique for manifold valued data with applications to medical image analysis",
+			"key" :       "banerjee2016nonlinear"
+		},
+		{
+			"label" :         "Bruun, N",
+			"type" :          "Author",
+			"original-name" : "Bruun, N",
+			"last-name" :     "Bruun"
+		},
+		{
+			"label" :         "Salehian, Hesamoddin",
+			"type" :          "Author",
+			"original-name" : "Salehian, Hesamoddin",
+			"last-name" :     "Salehian"
+		},
+		{
+			"label" :         "Girondo, Melanie A",
+			"type" :          "Author",
+			"original-name" : "Girondo, Melanie A",
+			"last-name" :     "Girondo"
+		},
+		{
+			"label" :         "Haty, Swagata",
+			"type" :          "Author",
+			"original-name" : "Haty, Swagata",
+			"last-name" :     "Haty"
+		},
+		{
+			"booktitle" : "Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition",
+			"pub-type" :  "inproceedings",
+			"uri" :       "urn:7a3db40a9a8f590cc058fff6b519261e",
+			"pages" :     "172--181",
+			"date" :      "2017",
+			"author" :    [
+				"Chakraborty, Rudrasis",
+				"Singh, Vikas",
+				"Adluru, Nagesh",
+				"Vemuri, Baba C"
+			],
+			"type" :      "Publication",
+			"year" :      "2017",
+			"label" :     "A geometric framework for statistical analysis of trajectories with distinct temporal spans",
+			"key" :       "chakraborty2017geometric"
+		},
+		{
+			"booktitle" : "Proceedings of the IEEE International Conference on Computer Vision",
+			"pub-type" :  "inproceedings",
+			"uri" :       "urn:c6248a29ed0f1cd2835f6628d6fa6f0c",
+			"pages" :     "4229--4237",
+			"date" :      "2015",
+			"author" :    [
+				"Chakraborty, Rudrasis",
+				"Vemuri, Baba C"
+			],
+			"type" :      "Publication",
+			"year" :      "2015",
+			"label" :     "Recursive Frechet mean computation on the Grassmannian and its applications to computer vision",
+			"key" :       "chakraborty2015recursive"
+		},
+		{
+			"publisher" : "Elsevier",
+			"journal" :   "Information Sciences",
+			"pub-type" :  "article",
+			"uri" :       "urn:6a5fd94756389ce0c5c77fe978a9dc8c",
+			"pages" :     "97--109",
+			"date" :      "2015",
+			"author" :    [
+				"Bandyopadhyay, Sanghamitra",
+				"Chakraborty, Rudrasis",
+				"Maulik, Ujjwal"
+			],
+			"volume" :    "305",
+			"type" :      "Publication",
+			"year" :      "2015",
+			"label" :     "Priority based epsilon dominance: A new measure in multiobjective optimization",
+			"key" :       "bandyopadhyay2015priority"
+		},
+		{
+			"label" :         "Saha, Sanjoy Kumar",
+			"type" :          "Author",
+			"original-name" : "Saha, Sanjoy Kumar",
+			"last-name" :     "Saha"
+		},
+		{
+			"label" :    "Our thanks to all those who have helped with this issue of Future Microbiology. Listed below are authors, referees and others who have kindly given their time, effort and expertise; their generosity has helped establish this publication.",
+			"key" :      "aggarwalour",
+			"type" :     "Publication",
+			"pub-type" : "article",
+			"author" :   [
+				"Aggarwal, R",
+				"Anaya-Velazquez, F",
+				"Appleman, M",
+				"Armstrong, W",
+				"Bhattacharya, S",
+				"Bhowmick, T",
+				"Bonifaz, A",
+				"Bruun, N",
+				"Canton, R",
+				"Chai, L",
+				"others"
+			],
+			"uri" :      "urn:9fa6cae062e721f0bd0568796ad26854"
+		},
+		{
+			"label" :    "2015 IEEE International Conference on Computer Vision (ICCV)(2015)",
+			"key" :      "chakraborty2015",
+			"type" :     "Publication",
+			"pub-type" : "article",
+			"author" :   [
+				"Chakraborty, Rudrasis",
+				"Vemuri, Baba C"
+			],
+			"uri" :      "urn:379b14738da591c91e90a8740f893e68"
+		},
+		{
+			"label" :         "Turner, Sara",
+			"type" :          "Author",
+			"original-name" : "Turner, Sara",
+			"last-name" :     "Turner"
+		},
+		{
+			"label" :         "Vemuri, Baba",
+			"type" :          "Author",
+			"original-name" : "Vemuri, Baba",
+			"last-name" :     "Vemuri"
+		},
+		{
+			"label" :         "Appleman, M",
+			"type" :          "Author",
+			"original-name" : "Appleman, M",
+			"last-name" :     "Appleman"
+		},
+		{
+			"label" :         "Bhattacharya, Sabyasachi",
+			"type" :          "Author",
+			"original-name" : "Bhattacharya, Sabyasachi",
+			"last-name" :     "Bhattacharya"
+		},
+		{
+			"label" :         "Vaillancourt, David",
+			"type" :          "Author",
+			"original-name" : "Vaillancourt, David",
+			"last-name" :     "Vaillancourt"
+		},
+		{
+			"label" :         "Dhara, Bibhas Chandra",
+			"type" :          "Author",
+			"original-name" : "Dhara, Bibhas Chandra",
+			"last-name" :     "Dhara"
+		},
+		{
+			"organization" : "ACM",
+			"booktitle" :    "Proceedings of the 21st ACM international conference on Information and knowledge management",
+			"pub-type" :     "inproceedings",
+			"uri" :          "urn:d0864a463acdcb560b44f68c8cb43b19",
+			"pages" :        "1113--1122",
+			"date" :         "2012",
+			"author" :       [
+				"Srinivasan, Sriram",
+				"Bhattacharya, Sourangshu",
+				"Chakraborty, Rudrasis"
+			],
+			"type" :         "Publication",
+			"year" :         "2012",
+			"label" :        "Segmenting web-domains and hashtags using length specific models",
+			"key" :          "srinivasan2012segmenting"
+		},
+		{
+			"label" :         "Banerjee, Monami",
+			"type" :          "Author",
+			"original-name" : "Banerjee, Monami",
+			"last-name" :     "Banerjee"
+		}
+	],
+	"types" :      {
+		"Author" :      {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#Author"
+		},
+		"Publication" : {
+			"label" :       "Publication",
+			"uri" :         "http:\/\/simile.mit.edu\/2006\/11\/bibtex#Publication",
+			"pluralLabel" : "Publications"
+		}
+	},
+	"properties" : {
+		"publisher" :     {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#publisher"
+		},
+		"organization" :  {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#organization"
+		},
+		"booktitle" :     {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#booktitle"
+		},
+		"journal" :       {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#journal"
+		},
+		"pages" :         {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#pages"
+		},
+		"date" :          {
+			"uri" : "http:\/\/purl.org\/dc\/elements\/1.1\/date"
+		},
+		"school" :        {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#school"
+		},
+		"last-name" :     {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#last-name"
+		},
+		"number" :        {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#number"
+		},
+		"author" :        {
+			"reverseLabel" :         "authors of",
+			"label" :                "author",
+			"groupingLabel" :        "their authors",
+			"uri" :                  "http:\/\/simile.mit.edu\/2006\/11\/bibtex#author",
+			"reverseGroupingLabel" : "what they author",
+			"reversePluralLabel" :   "authors of",
+			"valueType" :            "item",
+			"pluralLabel" :          "authors"
+		},
+		"original-name" : {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#original-name"
+		},
+		"volume" :        {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#volume"
+		},
+		"year" :          {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#year"
+		},
+		"key" :           {
+			"uri" : "http:\/\/simile.mit.edu\/2006\/11\/bibtex#key"
+		}
+	}
+}

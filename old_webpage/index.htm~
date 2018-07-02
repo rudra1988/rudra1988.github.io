@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Rudrasis Chakraborty</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="index.htm">RuDrAsIs<span class="logo_colour">   ChAkRaBoRtY</span></a></h1>
+        
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li class="selected"><a href="index.htm">Home</a></li>
+          <li><a href="ri.htm">Research Interest</a></li>
+          <li><a href="pub.php">Publications</a></li>
+          <li><a href="pers.htm">Personal</a></li>
+          <li><a href="contact.htm">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Latest News</h3>
+        <h4>Will be Updated soon</h4>
+        <h3>Some Links</h3>
+        <ul>
+          <li><a href="https://drive.google.com/file/d/0B28BXZ6QLdphWFpibGtyU3I5XzQ/view" target="_newtab&quot;&quot;">My Resume</a></li>
+           </ul>
+         </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>A Few Lines</h1>
+        <p>I am a Graduate Fellow at CISE, University of Florida. I am currently doing my PhD under Prof. Baba C. Vemuri. Previously, I have completed my Master's and Bachelor's degree in Computer Science from Indian Statistical Institute and Jadavpur University respectively. </p>
+        
+      </div>
+    </div>
+  </div>
+<div style="text-align: center; font-size: 0.75em;"></div></body>
+</html>
+

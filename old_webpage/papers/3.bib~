@@ -1,0 +1,8 @@
+@incollection{ghosal2011song,
+  title={Song classification: Classical and non-classical discrimination using mfcc co-occurrence based features},
+  author={Ghosal, Arijit and Chakraborty, Rudrasis and Dhara, Bibhas Chandra and Saha, Sanjoy Kumar},
+  booktitle={Signal Processing, Image Processing and Pattern Recognition},
+  pages={179--185},
+  year={2011},
+  publisher={Springer Berlin Heidelberg}
+}

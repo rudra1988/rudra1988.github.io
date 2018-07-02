@@ -1,0 +1,349 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Long Sectioned Curriculum Vitae
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the res.cls file to be in the same directory as the
+% .tex file. The res.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{res} % Use the res.cls style
+\usepackage{xcolor}
+\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\newsectionwidth{0pt} % Stops section indenting
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	YOUR NAME AND ADDRESS(ES) SECTION
+%----------------------------------------------------------------------------------------
+
+\name{Rudrasis Chakraborty\\ \\} % Your name at the top
+
+% If you don't want one of the addresses, simply remove all the text in the first or second \address{} bracket
+
+\address{{\bf Current Affiliation} \\ Graduate Student, CISE \\ University of Florida, Gainesville \\Florida 32605, USA} % Your address 1
+%{\bf School Address} \\ Department of Study \\ University \\ City, State 12345 \\ (000) 111-1111
+\address{{\bf Address} \\ 2811 SW Archer Road\\ Gainesville\\ FL 32608 \\ (+1) 352-871-4938 \\ rudrasischa AT gmail DOT com} % Your address 2
+
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{\centerline{OBJECTIVE}}
+
+%\vspace{8pt} % Gap between title and text
+
+%A position in Personnel Administration utilizing skills in recruiting, training and compensation.\\ 
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{EDUCATION}} 
+
+\vspace{8pt} % Gap between title and text
+
+{\sl Graduate Student},
+Computer \& Information Science \& Engg. \\
+University of Florida, USA \hfill Aug. 2013 - \\
+SUPERVISOR - Prof. Baba C. Vemuri \\
+CGPA - 3.94
+
+
+{\sl Master of Technology}, 
+Computer Science \& Engg. \\ 
+Indian Statistical Institute, Kolkata, India \hfill 2010-2012 \\ 
+THESIS - Incorporating $\epsilon$-dominance in MultiObjective Optimization : A study in AMOSA \\
+SUPERVISOR - Prof. Sanghamitra Bandyopadhyay \\
+Percentage 88.16 (1st class Distinction)
+ 
+{\sl Bachelor of Engineering},
+Computer Science \& Engg. \\ 
+Jadavpur University, Kolkata, India \hfill 2006-2010 \\
+THESIS - Audio Classification \\
+SUPERVISOR - Dr. Sanjoy Kumar Saha \\
+CGPA 8.68 (1st class Hons.)
+
+%{\sl Bachelor of Science}, Psychology \\ 
+%Utica College of Syracuse University, Utica, NY \hfill May 1987
+
+%----------------------------------------------------------------------------------------
+ 
+\vspace{0.2in} % Some whitespace between sections
+%
+%%----------------------------------------------------------------------------------------
+%%	RESEARCH EXPERIENCE SECTION
+%%----------------------------------------------------------------------------------------
+%
+%\section{\centerline{RESEARCH EXPERIENCE}} 
+%
+%\vspace{8pt} % Gap between title and text
+%
+%
+%{\sl Dimensionality Reduction Problem} \hfill August 2012 -- ongoing \\
+%SUPERVISOR : Dr. Nikhil R. Pal \\
+%AFFILIATION : Professor, Indian Statistical Institute, Kolkata, India
+%\begin{itemize}
+%\item Dimensionality Reduction Problem
+%\end{itemize}
+%
+%{\sl Sensor Selection} \hfill June 2012 -- ongoing \\
+%SUPERVISOR : Dr. Nikhil. R. Pal \\
+%AFFILIATION : Professor, Indian Statistical Institute, Kolkata, India
+%\begin{itemize}
+%\item Selection of sensors (group feature) with controlled redundancy and its real life application.
+%\end{itemize}
+%
+%{\sl Dimensionality Reduction} \hfill 2011 -- 2012 \\
+%SUPERVISOR : Dr. Nikhil. R. Pal \\
+%AFFILIATION : Professor, Indian Statistical Institute, Kolkata, India
+%\begin{itemize}
+%\item Develop a redundancy controlled dimensionality reduction technique based on neural network.
+%\end{itemize}
+%
+%{\sl Word Segmentation and and Policy Evaluation} \hfill May 2011 -- July 2011 \\
+%MENTOR : Sourangshu Bhattacharya \\
+%AFFILIATION : Senior Research Scientist, Yahoo! R $\&$ D labs, Bangalore.
+%\begin{itemize}
+%\item Word segmentation on web urls.
+%\item Policy evaluation in contextual bandit problem.
+%\end{itemize}
+%
+%
+%{\sl MultiObjective Optimization} \hfill 2009 -- 2012 \\
+%SUPERVISOR : Dr. Sanghamitra Bandyopadhyay \\
+%AFFILIATION : Professor, Indian Statistical Institute, Kolkata, India
+%\begin{itemize} \itemsep -2pt % Reduce space between items
+%\item Introduce $\epsilon$-dominance in popular multiobjective algorithm AMOSA and study the performance on benchmark problems and real life clustering application.
+%\item Develop a novel priority based $\epsilon$-dominance and study the improvement after incorporating it into exisitng MOO algorithms.
+%\end{itemize}
+% 
+%
+%{\sl Audio Classification} \hfill 2009 -- ongoing \\
+%SUPERVISOR : Dr. Sanjoy Kumar Saha \\
+%AFFILIATION : Associate Professor, Jadavpur University, Kolkata, India
+%\begin{itemize} \itemsep -2pt % Reduce space between items
+%\item Classification of Speech and Non-Speech signal, then further classify non-speech into instrument and song.
+%\item Classify different instrument type like Drum, Sitar, Piano, Tabla etc.
+%\item Classification of several song genres like Pop, Rock, Jazz etc. (ongoing).
+%\item Segment one signal into constituent Instrument, Song and Speech segments (ongoing).
+%\end{itemize}
+%
+%
+%
+%%----------------------------------------------------------------------------------------
+%
+%\vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\section{\centerline{Publications}}
+\vspace{2pt}
+{\bf Legend:} \footnotesize{\crule[cyan]{0.2cm}{0.2cm} Machine Learning, \crule[red!50!white!100]{0.2cm}{0.2cm} Diff. Geometry, \crule[blue]{0.2cm}{0.2cm} Statistics, \crule[green!50!white!100]{0.2cm}{0.2cm} Signal Processing, \crule[brown]{0.2cm}{0.2cm} Evolutionary Computation, \crule[magenta]{0.2cm}{0.2cm} Computer Vision, \crule[yellow]{0.2cm}{0.2cm} Medical Imaging}    
+\vspace{0.2in}
+
+\section{\centerline{Publications during PhD}} 
+\vspace{5pt} % Gap between title and text
+\begin{itemize}
+\item ``Recursive Frechet Mean Computation on the Grassmann and its Applications to Computer Vision", \textbf{Rudrasis Chakraborty} and B. Vemuri, ICCV, 2015. \crule[red!50!white!100]{0.2cm}{0.2cm} \crule[blue]{0.2cm}{0.2cm} \crule[magenta]{0.2cm}{0.2cm}
+\item ``An efficient recursive algorithm for atlas construction", \textbf{Rudrasis Chakraborty}, M. Banerjee, D. Seo, S. Turner, D. Fuller, J. Forder and B. Vemuri, MICCAI workshop on Mathematical Foundations of Computational Anatomy (MFCA), 2015. \crule[red!50!white!100]{0.2cm}{0.2cm} \crule[blue]{0.2cm}{0.2cm} \crule[yellow]{0.2cm}{0.2cm}
+\item ``An efficient recursive estimator of the Fr{\'e}chet mean on hypersphere with applications to Medical Image Analysis", H. Salehian,  \textbf{Rudrasis Chakraborty}, E. Ofori, D. Vaillancourt and B. Vemuri, MICCAI workshop on Mathematical Foundations of Computational Anatomy (MFCA), 2015. \crule[red!50!white!100]{0.2cm}{0.2cm} \crule[blue]{0.2cm}{0.2cm} \crule[yellow]{0.2cm}{0.2cm}
+\item ``Nonlinear regression on Riemannian manifolds and its applications to Neuro-image analysis", M. Banerjee, \textbf{Rudrasis Chakraborty}, D. Villiancourt, E. Ofori and B. Vemuri, MICCAI, 2015. \crule[red!50!white!100]{0.2cm}{0.2cm} \crule[blue]{0.2cm}{0.2cm} \crule[yellow]{0.2cm}{0.2cm}
+\end{itemize}
+
+\vspace{0.2in} % Some whitespace between sections
+
+\section{\centerline{Publications during Master}} 
+\vspace{5pt}
+\begin{itemize}
+\item ``Sensor (Feature-Group) Selection with Controlled Redundancy in a Connectionist Framework'', \textbf{Rudrasis Chakraborty}, C. T. Lin and Nikhil R. Pal in International Journal of Neural Systems, 24(6), 2014, \emph{IF: 6.507}. \crule[cyan]{0.2cm}{0.2cm}
+\item ``A New Measure of Priority Based $\epsilon$ Dominance in Multiobjective Optimization'', S. Bandyopadhyay, \textbf{Rudrasis Chakraborty} and U. Maulik  in Information Sciences, 305, 2015, \emph{IF: 4.038}. \crule[brown]{0.2cm}{0.2cm}
+\item ``Feature Selection Using a Neural Framework with Controlled Redundancy'', \textbf{Rudrasis Chakraborty} and Nikhil R. Pal in IEEE Transaction in Neural Network and Learning Systems, 26(1), 2015 \emph{IF: 4.291}. \crule[cyan]{0.2cm}{0.2cm}
+\item ``Incorporating $\epsilon$-dominance in AMOSA: Application to multiobjective 0/1 knapsack problem and clustering gene expression data", S. Bandyopadhyay, U. Maulik, \textbf{Rudrasis Chakraborty} in Applied Soft Computing, Vol. 13, No. 5, May 2013, 2405 - 2411 \emph{IF: 2.810}. \crule[brown]{0.2cm}{0.2cm}
+
+\end{itemize}
+
+\vspace{0.2in} % Some whitespace between sections
+
+\section{\centerline{Publications during Bachelor}} 
+\vspace{5pt}
+\begin{itemize}
+\item ``Perceptual Feature Based Song Genre Classification using RANSAC'', A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in International Journal of Computational Intelligence Studies, 4(1), 2015. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``A hierarchical approach for speech-instrumental-song classification'', A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in Springer Plus 2013, 2:526. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Music Classification Based on MFCC Variants and Amplitude Variation Pattern: A hierarchical approach", A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in International Journal of Signal Processing, Image Processing and Pattern Recognition (IJSIP), Vol.5, No.1, March 2012. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Genre Based Classification of Song Using Perceptual Features", A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in International Conference on Advanced Computing, Networking, and Informatics, 2013. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Segmenting Web-Domains and Hashtags using Length Specific Models", S. Srinivasan, S. Bhattacharya, \textbf{Rudrasis Chakraborty} in 21st ACM International Conference on Information and Knowledge Management (CIKM), 2012. \crule[cyan]{0.2cm}{0.2cm}
+\item ``Song/Instrumental Classification using Spectrogram Based Contextual Features", A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in CUBE International Conference, 2012. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Song Classification: Classical and Non-classical Discrimination using MFCC Co-occurrence Based Features'', A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in International Conference of Signal Processing, Image Processing and Pattern Recognition (SIP), 2011. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Automatic Identification of Instrument Type in Music Signal using Wavelet and MFCC'', A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in Fifth International Conference on Information Processing (ICIP), 2011. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Instrumental/Song Classification of Music Signal Using RANSAC'', A. Ghoshal, \textbf{Rudrasis Chakraborty}, B. Chanda Dhara, S. K. Saha in 3rd International Conference on Electronics Computer Technology (ICECT), 2011. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\item ``Speech/Music Classification Using Occurrence Pattern of ZCR and STE'', A. Ghoshal, \textbf{Rudrasis Chakraborty}, R. Chakraborty, S. Haty, B. Chanda Dhara, S. K. Saha in 3rd International Conference on Intelligent Information Technology Application (IITA), 2009. \crule[green!50!white!100]{0.2cm}{0.2cm}
+\end{itemize}
+
+\vspace{0.2in} % Some whitespace between sections
+
+
+\section{\centerline{COMMUNICATED MANUSCRIPTS}} 
+
+\begin{itemize}
+\item 1 paper in NIPS 2015.
+\end{itemize}
+%\vspace{15pt} % Gap between title and text
+%\begin{itemize} \itemsep -2pt % Reduce space between items
+
+
+
+%\end{itemize}
+
+
+\vspace{0.2in} % Some whitespace between sections
+
+
+\section{\centerline{COURSES COMPLETED}}
+
+\vspace{8pt} % Gap between title and text
+\begin{center}
+Theoretical Statistics (I and II), Linear Algebra, Curves and Surfaces, Differential Geometry (I and II), Computer Vision, Pattern Recognition and Image Processing, Artificial Intelligence, Advanced Image Processing,  Neural Networks\\
+\end{center}
+%----------------------------------------------------------------------------------------
+
+\vspace{0.2in} % Some whitespace between sections
+
+
+
+%----------------------------------------------------------------------------------------
+%	MEMBERSHIPS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{MEMBERSHIPS}} 
+
+\vspace{-5pt} % Reduce space between section title and contents
+
+\begin{center}
+Graduate Student Member of IEEE \\
+SIAM Student Member \\ 
+\end{center}
+
+\vspace{0.2in} % Some whitespace between sections
+
+
+
+%----------------------------------------------------------------------------------------
+%	MEMBERSHIPS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{REVIEWERSHIPS}} 
+
+\vspace{-5pt} % Reduce space between section title and contents
+
+\begin{center}
+{\it Conferences:} ICCV 2015, CVPR 2016 \\
+{\it Journals:} IEEE TNNLS, IEEE TSMC-A, Information Sciences, Applied Soft Computing
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+\vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+%	HONORS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{AWARDS AND FELLOWSHIPS}} 
+
+\vspace{-5pt} % Reduce space between section title and contents
+
+\begin{center}
+Awarded CISE travel grant to attend MICCAI 2015. \\
+Graduate School Fellowship from University of Florida. \\
+Gold Medal for best B.E Thesis in Jadavpur University. \\
+Appear first in M.Tech Curriculum in Indian Statistical Institute. \\
+ISIAA gold medal for standing first in M.Tech curriculum in Indian Statistical Institute. \\
+Received award in forms of books in all the four semesters during M.Tech curriculum. \\
+Awarded first prize in DST sponsored Image processing workshop held in Indian Statistical Institute, 2010. \\
+
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+
+\vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+%	HONORS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{INTERNSHIPS \& WORK EXPERIENCES}} 
+
+\vspace{-5pt} % Reduce space between section title and contents
+
+\begin{center}
+Indian Statistical Institue, Kolkata  \hfill May 2009 -- July 2009 \\
+Yahoo! R \& D Labs, Bangalore \hfill May 2011 -- July 2011 \\
+Teaching Assistant of Data Structure using C++, University of Florida \hfill August 2013 - Present  \\
+\end{center}
+
+%----------------------------------------------------------------------------------------
+
+
+\vspace{0.2in} % Some whitespace between sections
+
+%----------------------------------------------------------------------------------------
+%	INTERESTS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{\centerline{INTERESTS}} 
+
+\vspace{-5pt} % Reduce space between section title and contents
+
+\begin{center}
+Differential Geometry, Computer Vision, Patter Recognition, Listening Music, Artificial Intelligence, Reading Books, Information Theory, Signal Processing, Fishing, Neural Network
+\end{center} 
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\vspace{0.2in} % Some whitespace between sections
+
+
+\section{\centerline{SKILLS}}
+
+\vspace{8pt} % Gap between title and text
+\begin{center}
+\begin{itemize}
+\item Operating Systems : Linux, Microsoft Windows 
+\item Programming Languages : C, C++, Java, Python
+\item Software Packages : MATLAB, \LaTeX
+\end{itemize}
+\end{center}
+%----------------------------------------------------------------------------------------
+
+
+\end{resume} 
+\end{document}

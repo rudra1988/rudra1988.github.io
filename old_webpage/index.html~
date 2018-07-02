@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Rudrasis Chakraborty</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <h1><a href="index.htm">RuDrAsIs<span class="logo_colour">   ChAkRaBoRtY</span></a></h1>
+        
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <li class="selected"><a href="index.htm">Home</a></li>
+          <li><a href="ri.htm">Research Interest</a></li>
+          <li><a href="pub.htm">Publications</a></li>
+          <li><a href="pers.htm">Personal</a></li>
+          <li><a href="contact.htm">Contact Me</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>Latest News</h3>
+        <h4>Will be Updated soon</h4>
+        <h3>Some Links</h3>
+        <ul>
+          <li><a href="cv_rudrasis.pdf" target="_newtab&quot;&quot;">My Resume</a></li>
+           </ul>
+	<!-- Counter Code START --><a  target="_blank"><img src="http://www.e-zeeinternet.com/count.php?page=718606&style=bankgot&nbdigits=5" alt="Free Web Counter" border="0" ></a><br><a  title="Free Web Counter" target="_blank" style="font-family: Geneva, Arial, Helvetica, sans-serif; font-size: 10px; color: #000000; text-decoration: none;"><h2>Viewer Count</h2></a><!-- Counter Code END -->
+         </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>A Few Lines</h1>
+        <p>Methodical, Simple, Arrogant and a little bit of myself is me.</p>
+        
+      </div>
+    </div>
+  </div>
+<div style="text-align: center; font-size: 0.75em;"></div></body>
+</html>
+

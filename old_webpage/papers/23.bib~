@@ -1,0 +1,16 @@
+@inproceedings{chakraborty:cvpr:2017,
+  TITLE="Intrinsic Grassmann Averages for Online Linear and Robust Subspace Learning",
+  AUTHOR="Chakraborty, Rudrasis and Hauberg, S{\o}ren and Vemuri, Baba C.",
+  BOOKTITLE="Proceedings of the IEEE Conference of Computer Vision and Pattern Recognition",
+  PAGES="3976--3984",
+  YEAR=2016
+}
+
+
+@inproceedings{chakraborty:cvpr:2017,
+  title = {Intrinsic Grassmann Averages for Online Linear and Robust Subspace Learning},
+  author = {Rudrasis Chakraborty and S{\o}ren Hauberg and Baba C. Vemuri},
+  booktitle = {Proceedings IEEE Conf. on Computer Vision and Pattern Recognition (CVPR)},
+  year = {2017}
+}
+

@@ -1,0 +1,7 @@
+@inproceedings{banerjee2016nonlinear,
+  title={A nonlinear regression technique for manifold valued data with applications to Medical Image Analysis},
+  author={Banerjee, Monami and Chakraborty, Rudrasis and Ofori, Edward and Okun, Michael S and Viallancourt, David E and Vemuri, Baba C},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  pages={4424--4432},
+  year={2016}
+}

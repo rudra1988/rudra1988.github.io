@@ -1,0 +1,7 @@
+@inproceedings{chakraborty2016efficient,
+  title={An Efficient Exact-PGA Algorithm for Constant Curvature Manifolds},
+  author={Chakraborty, Rudrasis and Seo, Dohyung and Vemuri, Baba C.},
+  booktitle={Proceedings of the IEEE Conference of Computer Vision and Pattern Recognition},
+  pages={3976--3984},
+  year={2016}
+}

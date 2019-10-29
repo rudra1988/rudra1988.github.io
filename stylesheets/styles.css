@@ -36,7 +36,7 @@ a {
 }
 
 ::selection {
-    background: #ffb7b7; /* WebKit/Blink Browsers */
+    background: #efbc91; /* WebKit/Blink Browsers */
   }
 
 
@@ -52,7 +52,7 @@ a:hover small {
 }
 
 .wrapper {
-  width:770px;
+  width:1000px;
   margin:0 auto;
 }
 
@@ -81,7 +81,7 @@ b {
 }
 
 section {
-  width:520px;
+  width:720px;
   float:right;
   padding-bottom:50px;
 }

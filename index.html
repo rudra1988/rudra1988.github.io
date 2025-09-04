@@ -1,276 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudrasis Chakraborty - Research Scientist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!doctype html>
-<html>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
 
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: #333;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .research-card {
+            background: #f8f9ff;
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .research-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .research-card .authors {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .research-card .venue {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .research-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .research-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .research-links a:hover {
+            background: #5a67d8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 1.5rem;
+            background: #f8f9ff;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .research-grid,
+            .skills-grid,
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Rudrasis Chakraborty</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Rudrasis Chakraborty</h1>
+                <p class="subtitle">Research Scientist | Machine Learning & Statistical Modeling Expert</p>
+                <a href="#research" class="cta-button">Explore My Research</a>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.1rem; line-height: 1.8;">
+                    I am a research scientist specializing in statistical modeling, machine learning, and manifold-valued data analysis. 
+                    My work focuses on developing innovative recurrent neural network architectures for complex data structures, 
+                    with applications in computer vision, medical imaging, and signal processing.
+                </p>
+            </div>
+        </section>
+
+        <section id="research" class="section">
+            <div class="container">
+                <h2>Featured Research</h2>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h3>Statistical Recurrent Models on Manifold Valued Data</h3>
+                        <p class="authors">Rudrasis Chakraborty, Chun-Hao Yang*, Xingjian Zhen*, Monami Banerjee, Derek Archer, David Vaillancourt, Vikas Singh, Baba C. Vemuri</p>
+                        <p class="venue">Neural Information Processing Systems (NeurIPS) 2018</p>
+                        <p style="margin-bottom: 1rem; color: #666;">
+                            Novel approach to handling sequential data on Riemannian manifolds using statistical recurrent units, 
+                            with applications to medical imaging and computer vision tasks.
+                        </p>
+                        <div class="research-links">
+                            <a href="articles/SPD-SRU.pdf" target="_blank">📄 Paper</a>
+                            <a href="https://github.com/zhenxingjian/SPD-SRU" target="_blank">💻 Code</a>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for additional research -->
+                    <div class="research-card">
+                        <h3>Additional Research Projects</h3>
+                        <p class="authors">Coming Soon...</p>
+                        <p class="venue">Various Venues</p>
+                        <p style="margin-bottom: 1rem; color: #666;">
+                            More publications and research projects will be added here. Check back soon for updates 
+                            on recent work in machine learning and statistical modeling.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Research Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Machine Learning</h3>
+                        <ul class="skill-list">
+                            <li>Recurrent Neural Networks</li>
+                            <li>Statistical Modeling</li>
+                            <li>Deep Learning</li>
+                            <li>Computer Vision</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Mathematical Foundations</h3>
+                        <ul class="skill-list">
+                            <li>Manifold Learning</li>
+                            <li>Riemannian Geometry</li>
+                            <li>Statistical Analysis</li>
+                            <li>Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Applications</h3>
+                        <ul class="skill-list">
+                            <li>Medical Imaging</li>
+                            <li>Signal Processing</li>
+                            <li>Data Analysis</li>
+                            <li>Scientific Computing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>📧 Email</h3>
+                        <a href="mailto:contact@rudra1988.com">contact@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>🎓 Academia</h3>
+                        <a href="#" target="_blank">Google Scholar</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>💼 Professional</h3>
+                        <a href="#" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>💻 Code</h3>
+                        <a href="https://github.com/rudra1988" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rudrasis Chakraborty. All rights reserved.</p>
+        </div>
+    </footer>
+
     <script>
-     	function showhide(id) {
-    	var e = document.getElementById(id);
-    	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
- 		}
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
     </script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Rudrasis Chakraborty's Homepage</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,600,700" rel="stylesheet">
-
-    <link href="./font-awesome/css/font-awesome.css" rel="stylesheet">
-    <!--if lt IE 9>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <!endif-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 30%;
-  padding: 10px;
-}
-.column1 {
-  float: left;
-  width: 70%;
-  padding: 10px;
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-
-            <img border=0 Vspace=5 Hspace=0
-            src="images/rudra.jpg"
-            alt="Rudrasis"
-            width="195" height="255">
-            <br><br>
-
-        <p>
-        <par><font size=3px>Rudrasis Chakraborty</font></par><br>
-        Walnut Creek, CA </p>
-
-            rudrasischa@gmail.com <br>
-            <a href=https://scholar.google.com/citations?user=TB2Z8sgAAAAJ&hl=en>Google Scholar</a> |
-             <a href=https://www.dropbox.com/s/s1hoylcenashrw5/Rudrasis_CV.pdf?dl=0>CV</a> |
-            <a href=https://github.com/rudra1988/>Github</a> | <a href=https://rudrablog.github.io/>Blog</a> <br>
-            <br>
-            <a href="#Research">Research</a> |
-            <a href="#Publications">Publications</a> |
-            <a href="#Students">Students</a> |
-            <a href="#Teaching">Teaching</a> |
-            <a href="#Review">Reviewer Services</a>
-        
-    <a href="javascript:showhide('uniquename')">
-<h2 id="News">News</h2>
-</a>
-<small><par>11/20</par> Two papers accepted in AAAI.<br>
-<par>10/20</par> One paper accepted in IEEE TPAMI. Check out the preprint, <a href="https://pubmed.ncbi.nlm.nih.gov/33147684/"> VolterraNet </a> <br>       
-<par>6/20</par> Two papers accepted in IEEE TPAMI. Check out the preprints, <a href="https://ieeexplore.ieee.org/document/9086051"> GA paper </a> and <a href="https://ieeexplore.ieee.org/document/9122448"> ManifoldNet </a>. <br>
-  </small>    
-      </header>
-
-      <section>
-      <h2><i> "If we knew what it was we were doing, it would not be called research, would it?" -- Albert Einstein.</i></h1>
-      <h1>About</h1>
-      I do research in the intersection of statistics, differential geometry and deep learning. I am a senior machine learning scientist at Butlr, CA. I was an applied Scientist at Amazon Lab126. I was a member of the <a href=https://www.cise.ufl.edu/research/cvgmi/index.php>CVGMI group</a> at University of Florida (UF).
-      <br><br>
-      I joined UF&ndash;Gainesville in 2013  and finished my PhD in April 2018, where I was advised by <a href="https://www.cise.ufl.edu/~vemuri/">Baba Vemuri</a>. After my PhD, I continued my research at UF as a postdoctoral associate for 6 months and then spend 1.5 years at UC Berkely.
-<div id="uniquename" style="display:none;">
-
-</div>
-
-<h2 id="Research">Research</h2>
-
-See my <a href="https://www.dropbox.com/s/qx0a4h3k2vdalc0/res.pdf?dl=0">research agenda</a>
-for details on my current work. 
-I am always looking for collaborations. If you're interested in working with me, email me.
-<h2 id="Publications">Publications</h2>
- <br>
- <div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/cca.png"
-            alt="cca"
-            width="350" height="auto"></div>
-  <div class="column1">An Online Riemannian PCA for Stochastic Canonical Correlation Analysis<br>
-Rudrasis Chakraborty, Zihang Meng, Vikas Singh <br>
-<par>Neural Information Processing Systems, 2021</par><br>
-<a href="https://arxiv.org/pdf/2106.07479.pdf">paper</a>
-   </div>
-</div> 
- <br>
- <div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/me_ode_bg.png"
-            alt="ode"
-            width="350" height="auto"></div>
-  <div class="column1">A Variational Approximation for Analyzing the Dynamics of Panel data<br>
-Jurijs Nazarovs, Rudrasis Chakraborty, Songwong Tasneeyapant, Sathya Ravi and Vikas Singh <br>
-<par>37th Conference on Uncertainty in Artificial Intelligence (UAI 2021)</par><br>
-<a href="https://github.com/JurijsNazarovs/panel_me_ode/blob/main/paper.pdf">paper</a> | <a href="https://github.com/JurijsNazarovs/panel_me_ode">code</a>
-   </div>
-</div> 
- <br>
- <div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/robust.png"
-            alt="robust"
-            width="350" height="auto"></div>
-  <div class="column1">Simpler Certified Radius Maximization by Propagating Covariances<br>
-Xingjian Zhen, Rudrasis Chakraborty, Vikas Singh <br>
-<par>Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (Oral)</par><br>
-<a href="https://arxiv.org/pdf/2104.05888.pdf">paper</a> | <a href="https://github.com/zhenxingjian/Propagating_Covariance">code</a>
-   </div>
-</div> 
- <br>
- <div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/nystrom.png"
-            alt="nystrom"
-            width="350" height="auto"></div>
-  <div class="column1">Nyströmformer: A Nyström-Based Algorithm for Approximating Self-Attention<br>
-Yunyang Xiong, Zhanpeng Zeng, Rudrasis Chakraborty, Mingxing Tan, Glenn Fung, Yin Li, Vikas Singh<br>
-<par>Association for the Advancement of Artificial Intelligence (AAAI) 2021</par><br>
-<a href="https://arxiv.org/pdf/2102.03902.pdf">paper</a> | <a href="https://github.com/mlpen/Nystromformer">code</a>
-   </div>
-</div> 
- <br>
- <div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/dual_glow.png"
-            alt="dual-glow"
-            width="350" height="auto"></div>
-  <div class="column1">Flow-based Generative Models for Learning Manifold to Manifold Mappings<br>
-Xingjian Zhen, Rudrasis Chakraborty,
-Lucy Yang, Vikas Singh<br>
-<par>Association for the Advancement of Artificial Intelligence (AAAI) 2021</par><br>
-<a href="https://www.dropbox.com/s/1wcnfol4rp1yr8r/manifolddualglow.pdf?dl=0">paper</a>
-   </div>
-</div> 
-<br>   
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/volterranet.png"
-            alt="volterranet"
-            width="450" height="auto"></div>
-  <div class="column1">VolterraNet: A higher order convolutionalnetwork with group equivariance forhomogeneous manifolds<br>
-Rudrasis Chakraborty, Monami Banerjee, Jose Bouza, Baba C. Vemuri<br>
-<par>IEEE Trans. on Pattern Analysis and Machine Intelligence 2020</par><br>
-<a href="articles/volterra.pdf">paper</a>
-   </div>
-</div> 
-<br>  
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/surRealDiagram1.png"
-            alt="surReal"
-            width="550" height="auto"></div>
-  <div class="column1">SurReal: Complex-Valued Learning as PrincipledTransformations on a Scaling and Rotation Manifold <br>
-Rudrasis Chakraborty, Yifei Xing and Stella Yu<br>
-<par>IEEE Trans. on Neural Network and Learning Systems 2020</par><br>
-<a href="articles/surreal.pdf">paper</a> | <a href="https://github.com/xingyifei2016/RotLieNet">code</a>
-   </div>
-</div> 
-<br>
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/manifoldnet_fig.png"
-            alt="manifoldnet"
-            width="550" height="auto"></div>
-  <div class="column1">ManifoldNet: A Deep Neural Network for Manifold-valued Data with Applications<br>
-Rudrasis Chakraborty, Jose Bouza, Jonathan Manton and Baba C. Vemuri<br>
-<par>IEEE Trans. on Pattern Analysis and Machine Intelligence 2020</par><br>
-<a href="articles/manifoldnet.pdf">paper</a> | <a href="https://github.com/jjbouza/manifold-net-vision">code</a>
-   </div>
-</div> 
-<br>
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/basic_idea.png"
-            alt="iga"
-            width="550" height="auto"></div>
-  <div class="column1">Intrinsic Grassmann Averages for Online Linear, Robust and Nonlinear Subspace Learning<br>
-Rudrasis Chakraborty, Liu Yang, Soren Hauberg and Baba C. Vemuri<br>
-<par>IEEE Trans. on Pattern Analysis and Machine Intelligence 2020</par><br>
-<a href="articles/grassman.pdf">paper</a>
-   </div>
-</div> 
-<br>
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/our_conv.png"
-            alt="ocnn"
-            width="550" height="auto"></div>
-  <div class="column1">Orthogonal Convolutional Neural Networks<br>
-Jiayun Wang, Yubei Chen, Rudrasis Chakraborty, Stella X. Yu<br>
-<par>Computer Vision and Pattern Recognition (CVPR) 2020</par><br>
-<a href="articles/ocnn.pdf">paper</a> | <a href="https://github.com/samaonline/Orthogonal-Convolutional-Neural-Networks">code</a>
-   </div>
-</div> 
-<br>
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/dot_struct.png"
-            alt="dcnn"
-            width="550" height="auto"></div>
-  <div class="column1">Dilated Convolutional Neural Networks (DCNN) for Sequential Manifold-valued Data in Neuroimaging
-<br>Rudrasis Chakraborty, XIngjian Zhen and Vikas Singh<br>
-<par>International Conference of Computer Vision (ICCV) 2019</par><br>
-<a href="articles/dcnn.pdf">paper</a> | <a href="https://github.com/zhenxingjian/DCNN">code</a>
-   </div>
-</div> 
-<br>
-<div class="row">
-  <div class="column"><img border=0 Vspace=5 Hspace=0
-            src="images/rnn_model.png"
-            alt="sru"
-            width="550" height="auto"></div>
-  <div class="column1">Statistical Recurrent Models on Manifold valued data</a><br>
-Rudrasis Chakraborty, Chun-Hao Yang*, Xingjian Zhen*, Monami Banerjee, Derek Archer, David Vaillancourt, Vikas Singh and Baba C. Vemuri<br>
-<par>Neural Information Processing Systems (NeurIPS) 2018</par><br>
-<a href="articles/SPD-SRU.pdf">paper</a> | <a href="https://github.com/zhenxingjian/SPD-SRU">code</a>
-   </div>
-</div>         
-<br>
-<h1> For the entire publication list see <a href="publist.html">here</a></h1>
-<br>
-<h2 id="Students">Students Mentored</h2>
-<a href=https://zhenxingjian.github.io/homepage/>Xingjian Zhen</a>, Steven Kan, Eric Huang, Yifei Xing, <a href=https://imyiningliu.github.io>Yining Liu</a>, Minxuan (Alice) Duan, Shixuan (Wayne) Li, Amira Dinari
-(and others)
-
-<h2 id="Teaching">Teaching</h2>
-Please see my <a href="https://drive.google.com/open?id=1YbSeAQnv-NRmNu78QE0u0xXPc8a7rkRk">teaching statement</a>.<br> 
-        <par>F14,15,16</par>
-        CAP 5416: Computer Vision<br>
-
-        <h2 id="Review">Reviewer Services</h2>
-        <par>15-</par> CVPR, ICLR, ICCV, MICCAI, ECCV, NIPS, ACCV, BMVC, ICML, AAAI<br>
-        <par>16-</par> IEEE TPAMI, IEEE TIP, TSMC-B, TNNLS, IJCV, IEEE TSP, IEEE JBHI<br>
-
-      </tbody></table>
-
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=4N18TLLqiYm_v4BI8dCcUtSdG2g0AAcfue0peQDZa3s&cl=ffffff&w=a"></script>
-
-      </section>
-
-      <footer>
-          <p><span style="font-size:0.7em">Based on <a href="https://github.com/orderedlist/minimal" style="color:black">minimal</a> by <a href="https://github.com/orderedlist" style="color:black">orderedlist</a>&mdash;<a href="http://creativecommons.org/licenses/by-sa/3.0/" style="color:black">CC BY-SA 3.0</a></span></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
-
- </html>
-
+</body>
+</html>

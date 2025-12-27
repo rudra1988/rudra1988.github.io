@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's Clock Solver - Rudrasis Chakraborty</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Header and Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        .nav-links a.active {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+
+        .clock-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .clock-title {
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .clock-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .clock-face {
+            aspect-ratio: 1;
+            background: white;
+            border: 3px solid #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .clock-face:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .clock-face::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #333;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .clock-hand {
+            position: absolute;
+            width: 3px;
+            height: 35%;
+            background: #e74c3c;
+            transform-origin: bottom center;
+            border-radius: 3px;
+            transition: transform 0.3s ease;
+        }
+
+        .pins-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .pin {
+            padding: 12px;
+            background: #e0e0e0;
+            border: 2px solid #999;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .pin.up {
+            background: #4caf50;
+            color: white;
+            border-color: #388e3c;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+        }
+
+        .pin.down {
+            background: #f44336;
+            color: white;
+            border-color: #c62828;
+            transform: translateY(4px);
+            box-shadow: 0 2px 4px rgba(244, 67, 54, 0.4);
+        }
+
+        .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #f39c12;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+
+        .solution-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .solution-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .solution-step {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .solution-step-number {
+            font-weight: bold;
+            color: #667eea;
+            margin-right: 10px;
+        }
+
+        .pin-pattern {
+            display: inline-flex;
+            gap: 5px;
+            margin: 0 10px;
+        }
+
+        .pin-indicator {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .pin-indicator.up {
+            background: #4caf50;
+        }
+
+        .pin-indicator.down {
+            background: #f44336;
+        }
+
+        .status-message {
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        .status-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .status-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .status-info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+
+        .wheel-controls {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .wheel-control {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+        }
+
+        .wheel-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #667eea;
+        }
+
+        .wheel-buttons {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .wheel-btn {
+            padding: 8px 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .wheel-btn:hover {
+            background: #5568d3;
+            transform: scale(1.05);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            color: #667eea;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Rudrasis Chakraborty</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="rubiks-clock.html" class="active">🕐 Rubik's Clock</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>🕐 Rubik's Clock Solver</h1>
+        <p class="subtitle">Interactive solver - Click clocks to adjust, then solve!</p>
+
+        <div class="main-content">
+            <!-- Front Side -->
+            <div class="clock-container">
+                <div class="clock-title">Front Side</div>
+                <div class="clock-grid" id="front-grid">
+                    <!-- Clocks will be generated by JS -->
+                </div>
+            </div>
+
+            <!-- Back Side -->
+            <div class="clock-container">
+                <div class="clock-title">Back Side</div>
+                <div class="clock-grid" id="back-grid">
+                    <!-- Clocks will be generated by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Pins -->
+        <div class="clock-container">
+            <div class="clock-title">Pins (Click to Toggle)</div>
+            <div class="pins-container">
+                <div class="pin up" data-pin="0">Pin 1: UP ▲</div>
+                <div class="pin up" data-pin="1">Pin 2: UP ▲</div>
+                <div class="pin up" data-pin="2">Pin 3: UP ▲</div>
+                <div class="pin up" data-pin="3">Pin 4: UP ▲</div>
+            </div>
+        </div>
+
+        <!-- Wheel Controls -->
+        <div class="clock-container">
+            <div class="clock-title">Turn Wheels</div>
+            <div class="wheel-controls">
+                <div class="wheel-control">
+                    <div class="wheel-label">⬉ Top-Left Wheel</div>
+                    <div class="wheel-buttons">
+                        <button class="wheel-btn" onclick="turnWheel(0, 1)">+1</button>
+                        <button class="wheel-btn" onclick="turnWheel(0, 3)">+3</button>
+                        <button class="wheel-btn" onclick="turnWheel(0, 6)">+6</button>
+                        <button class="wheel-btn" onclick="turnWheel(0, -1)">-1</button>
+                    </div>
+                </div>
+                <div class="wheel-control">
+                    <div class="wheel-label">⬈ Top-Right Wheel</div>
+                    <div class="wheel-buttons">
+                        <button class="wheel-btn" onclick="turnWheel(1, 1)">+1</button>
+                        <button class="wheel-btn" onclick="turnWheel(1, 3)">+3</button>
+                        <button class="wheel-btn" onclick="turnWheel(1, 6)">+6</button>
+                        <button class="wheel-btn" onclick="turnWheel(1, -1)">-1</button>
+                    </div>
+                </div>
+                <div class="wheel-control">
+                    <div class="wheel-label">⬋ Bottom-Left Wheel</div>
+                    <div class="wheel-buttons">
+                        <button class="wheel-btn" onclick="turnWheel(2, 1)">+1</button>
+                        <button class="wheel-btn" onclick="turnWheel(2, 3)">+3</button>
+                        <button class="wheel-btn" onclick="turnWheel(2, 6)">+6</button>
+                        <button class="wheel-btn" onclick="turnWheel(2, -1)">-1</button>
+                    </div>
+                </div>
+                <div class="wheel-control">
+                    <div class="wheel-label">⬊ Bottom-Right Wheel</div>
+                    <div class="wheel-buttons">
+                        <button class="wheel-btn" onclick="turnWheel(3, 1)">+1</button>
+                        <button class="wheel-btn" onclick="turnWheel(3, 3)">+3</button>
+                        <button class="wheel-btn" onclick="turnWheel(3, 6)">+6</button>
+                        <button class="wheel-btn" onclick="turnWheel(3, -1)">-1</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="btn btn-primary" onclick="solveClock()">🎯 Solve Clock</button>
+            <button class="btn btn-secondary" onclick="scrambleClock()">🔀 Scramble</button>
+            <button class="btn btn-danger" onclick="resetClock()">🔄 Reset</button>
+            <button class="btn btn-success" onclick="executeNextStep()">▶️ Next Step</button>
+        </div>
+
+        <!-- Status Message -->
+        <div id="status-message"></div>
+
+        <!-- Solution Display -->
+        <div id="solution-container"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Rudrasis Chakraborty. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Rubik's Clock State
+        let clock = {
+            front: Array(9).fill(0),
+            back: Array(9).fill(0),
+            pins: [1, 1, 1, 1]
+        };
+
+        let solution = [];
+        let currentStepIndex = 0;
+
+        const wheelAffects = {
+            0: { pins_up: [0, 1, 3, 4], back: [0, 1, 3, 4] },
+            1: { pins_up: [1, 2, 4, 5], back: [1, 2, 4, 5] },
+            2: { pins_up: [3, 4, 6, 7], back: [3, 4, 6, 7] },
+            3: { pins_up: [4, 5, 7, 8], back: [4, 5, 7, 8] }
+        };
+
+        function init() {
+            renderClocks();
+            updatePins();
+        }
+
+        function renderClocks() {
+            const frontGrid = document.getElementById('front-grid');
+            const backGrid = document.getElementById('back-grid');
+            
+            frontGrid.innerHTML = '';
+            backGrid.innerHTML = '';
+
+            for (let i = 0; i < 9; i++) {
+                frontGrid.appendChild(createClockElement(clock.front[i], i, 'front'));
+                backGrid.appendChild(createClockElement(clock.back[i], i, 'back'));
+            }
+        }
+
+        function createClockElement(value, index, side) {
+            const div = document.createElement('div');
+            div.className = 'clock-face';
+            div.onclick = () => adjustClock(side, index);
+            
+            const hand = document.createElement('div');
+            hand.className = 'clock-hand';
+            hand.style.transform = `rotate(${value * 30}deg)`;
+            
+            div.appendChild(hand);
+            div.innerHTML += value === 0 ? '12' : value.toString();
+            
+            return div;
+        }
+
+        function adjustClock(side, index) {
+            if (side === 'front') {
+                clock.front[index] = (clock.front[index] + 1) % 12;
+            } else {
+                clock.back[index] = (clock.back[index] + 1) % 12;
+            }
+            renderClocks();
+            checkSolved();
+        }
+
+        document.querySelectorAll('.pin').forEach(pinEl => {
+            pinEl.onclick = () => {
+                const pinIndex = parseInt(pinEl.dataset.pin);
+                clock.pins[pinIndex] = 1 - clock.pins[pinIndex];
+                updatePins();
+            };
+        });
+
+        function updatePins() {
+            document.querySelectorAll('.pin').forEach(pinEl => {
+                const pinIndex = parseInt(pinEl.dataset.pin);
+                const isUp = clock.pins[pinIndex] === 1;
+                pinEl.className = isUp ? 'pin up' : 'pin down';
+                pinEl.textContent = `Pin ${pinIndex + 1}: ${isUp ? 'UP ▲' : 'DOWN ▼'}`;
+            });
+        }
+
+        function turnWheel(wheel, amount) {
+            amount = ((amount % 12) + 12) % 12;
+
+            if (clock.pins[wheel] === 1) {
+                wheelAffects[wheel].pins_up.forEach(idx => {
+                    clock.front[idx] = (clock.front[idx] + amount) % 12;
+                });
+            }
+
+            wheelAffects[wheel].back.forEach(idx => {
+                clock.back[idx] = (clock.back[idx] + amount) % 12;
+            });
+
+            renderClocks();
+            checkSolved();
+        }
+
+        function checkSolved() {
+            const isSolved = clock.front.every(v => v === 0) && clock.back.every(v => v === 0);
+            if (isSolved) {
+                showStatus('🎉 SOLVED! All clocks at 12:00!', 'success');
+            }
+            return isSolved;
+        }
+
+        function resetClock() {
+            clock.front = Array(9).fill(0);
+            clock.back = Array(9).fill(0);
+            clock.pins = [1, 1, 1, 1];
+            solution = [];
+            currentStepIndex = 0;
+            renderClocks();
+            updatePins();
+            showStatus('Clock reset to solved state', 'info');
+            document.getElementById('solution-container').innerHTML = '';
+        }
+
+        function scrambleClock() {
+            for (let i = 0; i < 15; i++) {
+                clock.pins = Array(4).fill(0).map(() => Math.random() > 0.5 ? 1 : 0);
+                const wheel = Math.floor(Math.random() * 4);
+                const amount = Math.floor(Math.random() * 11) + 1;
+                turnWheel(wheel, amount);
+            }
+            solution = [];
+            currentStepIndex = 0;
+            updatePins();
+            showStatus('Clock scrambled! Try solving it.', 'info');
+            document.getElementById('solution-container').innerHTML = '';
+        }
+
+        function solveClock() {
+            showStatus('🔍 Computing solution...', 'info');
+            document.getElementById('solution-container').innerHTML = '<div class="loading"><div class="spinner"></div>Solving...</div>';
+
+            setTimeout(() => {
+                solution = computeSolution();
+                currentStepIndex = 0;
+                displaySolution();
+                
+                if (solution.length > 0) {
+                    showStatus(`Solution found in ${solution.length} steps! Click "Next Step" to execute.`, 'success');
+                } else {
+                    showStatus('Clock is already solved!', 'success');
+                }
+            }, 100);
+        }
+
+        function computeSolution() {
+            const moves = [];
+            const tempClock = JSON.parse(JSON.stringify(clock));
+
+            tempClock.pins = [1, 1, 1, 1];
+            for (let wheel = 0; wheel < 4; wheel++) {
+                const cornerIdx = [0, 2, 6, 8][wheel];
+                const correction = (12 - tempClock.front[cornerIdx]) % 12;
+                if (correction > 0) {
+                    moves.push({ pins: [...tempClock.pins], wheel, amount: correction });
+                    applyMove(tempClock, tempClock.pins, wheel, correction);
+                }
+            }
+
+            const edgePatterns = [
+                { pins: [1, 1, 0, 0], wheel: 0, edge: 1 },
+                { pins: [0, 1, 0, 1], wheel: 1, edge: 2 },
+                { pins: [0, 0, 1, 1], wheel: 2, edge: 7 },
+                { pins: [1, 0, 1, 0], wheel: 0, edge: 3 }
+            ];
+
+            for (let iter = 0; iter < 2; iter++) {
+                edgePatterns.forEach(({ pins, wheel, edge }) => {
+                    tempClock.pins = pins;
+                    const correction = (12 - tempClock.front[edge]) % 12;
+                    if (correction > 0 && correction <= 6) {
+                        moves.push({ pins: [...pins], wheel, amount: correction });
+                        applyMove(tempClock, pins, wheel, correction);
+                    }
+                });
+            }
+
+            tempClock.pins = [0, 0, 0, 0];
+            const centerCorrection = (12 - tempClock.front[4]) % 12;
+            if (centerCorrection > 0) {
+                moves.push({ pins: [...tempClock.pins], wheel: 0, amount: centerCorrection });
+                applyMove(tempClock, tempClock.pins, 0, centerCorrection);
+            }
+
+            for (let wheel = 0; wheel < 4; wheel++) {
+                const cornerIdx = [0, 2, 6, 8][wheel];
+                const correction = (12 - tempClock.back[cornerIdx]) % 12;
+                if (correction > 0) {
+                    moves.push({ pins: [0, 0, 0, 0], wheel, amount: correction });
+                    applyMove(tempClock, [0, 0, 0, 0], wheel, correction);
+                }
+            }
+
+            for (let iter = 0; iter < 2; iter++) {
+                edgePatterns.forEach(({ pins, wheel, edge }) => {
+                    const correction = (12 - tempClock.back[edge]) % 12;
+                    if (correction > 0 && correction <= 3) {
+                        moves.push({ pins: [0, 0, 0, 0], wheel, amount: correction });
+                        applyMove(tempClock, [0, 0, 0, 0], wheel, correction);
+                    }
+                });
+            }
+
+            const backCenterCorrection = (12 - tempClock.back[4]) % 12;
+            if (backCenterCorrection > 0) {
+                moves.push({ pins: [0, 0, 0, 0], wheel: 0, amount: backCenterCorrection });
+            }
+
+            return moves;
+        }
+
+        function applyMove(tempClock, pins, wheel, amount) {
+            if (pins[wheel] === 1) {
+                wheelAffects[wheel].pins_up.forEach(idx => {
+                    tempClock.front[idx] = (tempClock.front[idx] + amount) % 12;
+                });
+            }
+            wheelAffects[wheel].back.forEach(idx => {
+                tempClock.back[idx] = (tempClock.back[idx] + amount) % 12;
+            });
+        }
+
+        function displaySolution() {
+            const container = document.getElementById('solution-container');
+            if (solution.length === 0) {
+                container.innerHTML = '<div class="status-message status-success">Clock is already solved!</div>';
+                return;
+            }
+
+            let html = '<div class="solution-title">Solution Steps:</div>';
+            solution.forEach((move, index) => {
+                const pinPattern = move.pins.map(p => 
+                    `<span class="pin-indicator ${p ? 'up' : 'down'}"></span>`
+                ).join('');
+                
+                const wheelNames = ['Top-Left', 'Top-Right', 'Bottom-Left', 'Bottom-Right'];
+                
+                html += `
+                    <div class="solution-step" id="step-${index}">
+                        <span class="solution-step-number">Step ${index + 1}:</span>
+                        Pins: <span class="pin-pattern">${pinPattern}</span>
+                        Turn ${wheelNames[move.wheel]} wheel ${move.amount > 6 ? '-' + (12 - move.amount) : '+' + move.amount} hours
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function executeNextStep() {
+            if (currentStepIndex >= solution.length) {
+                showStatus('All steps executed!', 'info');
+                return;
+            }
+
+            const move = solution[currentStepIndex];
+            
+            document.querySelectorAll('.solution-step').forEach((el, idx) => {
+                el.style.background = idx === currentStepIndex ? '#e3f2fd' : 'white';
+            });
+
+            clock.pins = move.pins;
+            updatePins();
+            
+            setTimeout(() => {
+                turnWheel(move.wheel, move.amount);
+                currentStepIndex++;
+                
+                if (currentStepIndex >= solution.length) {
+                    showStatus('✅ All steps completed!', 'success');
+                } else {
+                    showStatus(`Step ${currentStepIndex} of ${solution.length} executed`, 'info');
+                }
+            }, 300);
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status-message');
+            statusDiv.className = `status-message status-${type}`;
+            statusDiv.textContent = message;
+            setTimeout(() => {
+                if (statusDiv.textContent === message) {
+                    statusDiv.textContent = '';
+                    statusDiv.className = '';
+                }
+            }, 5000);
+        }
+
+        init();
+    </script>
+</body>
+</html>
+```
+
+## 3. Save Your Updated Main Page
+
+Make sure to save your main HTML file (the one you showed me) with the updated navigation as `index.html`.
+
+## File Structure
+
+You should now have:
+```
+your-website/
+├── index.html          (your main page with updated nav)
+├── rubiks-clock.html   (the new Rubik's Clock page)
+└── articles/           (your existing folder)
+    └── SPD-SRU.pdf
